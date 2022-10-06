@@ -24,7 +24,7 @@ const MainHeader = styled.header`
   align-items: center;
   position: relative;
   .logo {
-    height: 5rem;
+    height: 8rem;
   }
   `;
 
