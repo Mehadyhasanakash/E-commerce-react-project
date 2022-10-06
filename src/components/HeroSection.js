@@ -4,8 +4,8 @@ import { Button } from "../styles/Button";
 import hero from "../images/hero.jpg";
 
 
-const HeroSection = () => {
-//   const { name } = myData;
+const HeroSection = ({myData}) => {
+  const { name } = myData;
 
   return (
     <Wrapper>
@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="grid grid-two-column">
           <div className="hero-section-data">
             <p className="intro-data">Welcome to </p>
-            <h1> Amazon </h1>
+            <h1> {name} </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
               atque temporibus veniam doloribus libero ad error omnis voluptates
