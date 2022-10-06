@@ -2,10 +2,10 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
-import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from '../src/components/Header'
 import Cart from './Cart';
+import {GlobalStyle} from "./GlobalStyle"
 
 
 function App() {
@@ -39,7 +39,8 @@ function App() {
   return (
     <>
     <ThemeProvider theme={theme}>
-    <GlobalStyle/>
+    
+   <GlobalStyle/>
     <Header></Header>
     <Routes>
       
