@@ -8,6 +8,7 @@ import Cart from './Cart';
 import {GlobalStyle} from "./GlobalStyle"
 import Contact from './Contact';
 import Footer from './components/Footer';
+import Error from './components/Error';
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
       <Route path='/about' element={<About/>}> </Route>
       <Route path='/cart' element={<Cart/>}> </Route>
       <Route path='/contact' element={<Contact/>}> </Route>
+      <Route path='*' element={<Error/>}> </Route>
     </Routes>
     <Footer/>
 
