@@ -6,6 +6,8 @@ import { ThemeProvider } from 'styled-components';
 import Header from '../src/components/Header'
 import Cart from './Cart';
 import {GlobalStyle} from "./GlobalStyle"
+import Contact from './Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -48,7 +50,9 @@ function App() {
       <Route path='/home' element={<Home/>}> </Route>
       <Route path='/about' element={<About/>}> </Route>
       <Route path='/cart' element={<Cart/>}> </Route>
+      <Route path='/contact' element={<Contact/>}> </Route>
     </Routes>
+    <Footer/>
 
    
     </ThemeProvider>
