@@ -1,14 +1,18 @@
 import React from 'react'
 import HeroSection from './components/HeroSection'
+import Services from './components/Services'
+import Trusted from './components/Trusted'
 
 const Home = () => {
   const data = {
-    name :"Amazon Shop",
+    name: "Amazon Product"
   }
   
   return (
     <div>
-      <HeroSection myData= {data}/>
+      <HeroSection myData = {data}/>
+      <Services/>
+      <Trusted/>
     </div>
   )
 }

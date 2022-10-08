@@ -5,7 +5,7 @@ import hero from "../images/hero.jpg";
 
 
 const HeroSection = ({myData}) => {
-  const { name } = myData;
+ const {name} = myData;
 
   return (
     <Wrapper>
@@ -26,11 +26,7 @@ const HeroSection = ({myData}) => {
           {/* our homepage image  */}
           <div className="hero-section-image">
             <figure>
-              <img className="img-style"
-                src={hero}
-                alt="hero-section-photo"
-                
-              />
+              <img className="img-style" src={hero} alt="" />
             </figure>
           </div>
         </div>
