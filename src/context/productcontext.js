@@ -25,9 +25,16 @@ const AppProvider = ({ children }) => {
 
  
     const getProduct = async (url) =>{
-        const res = await axios.get(url);
+        dispatch({type:"SET_LODDING"})
+        try{
+            const res = await axios.get(url);
         const product = await res.data;
-        console.log(product)
+        dispatch({type:" MY_API_DATA", payload: product})
+        }
+        catch (error){
+            dispatch({type:"API_ERROR"})
+
+        }
 
     }
     useEffect( () =>{
