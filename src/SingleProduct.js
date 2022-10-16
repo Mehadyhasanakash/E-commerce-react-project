@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SingleProduct = () =>{
   return<> <Wrapper>
-
+<h1>single page</h1>
 </Wrapper>
 </>;
 
