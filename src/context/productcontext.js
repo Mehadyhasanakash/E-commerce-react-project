@@ -27,12 +27,26 @@ const AppProvider = ({ children }) => {
     }
   };
 
+
+  // 2nd Singel api data
+  const getSingaleProduct = async (url) =>{
+    dispatch({ type: "SET_SINGLELOADING" });
+    try {
+      const res = await axios.get(url)
+      const singaleProduct = await  res.data;
+      dispatch({type:"SET_SINGALE_PRODUCT", payload: singaleProduct})
+    } catch (error) {
+      dispatch({type: "SET_SINGLE_ERROR"})
+      
+    }
+  }
+
   useEffect(() => {
     getProducts(API);
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, getSingaleProduct}}>{children}</AppContext.Provider>
   );
 };
 
