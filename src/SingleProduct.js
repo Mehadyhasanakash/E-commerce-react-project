@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect } from 'react';
 import { useProductContext } from "./context/productcontext";
+import { Navigation } from "./components/Navigation";
 
 const SingleProduct = () =>{
   const  {isSingleLoading, singaleProduct, getSingaleProduct} = useProductContext();
@@ -16,11 +17,25 @@ const SingleProduct = () =>{
     
   }, [])
 
+  if(isSingleLoading){
+    return  <div> Lodding.............</div>
+  }
 
-  return<> <Wrapper>
-<h1>single page {name}</h1>
-</Wrapper>
-</>;
+
+  return(
+    <>
+
+    <Wrapper>
+      <Navigation title={name}></Navigation>
+      <Container className="container" >
+        <div className="grid grid-two-column">
+
+        </div>
+
+      </Container>
+    </Wrapper>
+    </>
+  )
 
 }
 
