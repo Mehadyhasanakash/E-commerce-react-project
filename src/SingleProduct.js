@@ -3,6 +3,12 @@ import styled from "styled-components";
 import { useEffect } from 'react';
 import { useProductContext } from "./context/productcontext";
 import { Navigation } from "./components/Navigation";
+import { Container } from "./styles/Container";
+import FormatingPrice from "./helpers/FormatingPrice";
+import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import { MdSecurity } from "react-icons/md";
+
+
 
 const SingleProduct = () =>{
   const  {isSingleLoading, singaleProduct, getSingaleProduct} = useProductContext();
@@ -29,6 +35,47 @@ const SingleProduct = () =>{
       <Navigation title={name}></Navigation>
       <Container className="container" >
         <div className="grid grid-two-column">
+
+        {/* product image */}
+          <div className="product-images">
+            images
+          </div>
+        {/* product data */}
+        <div className="product-data">
+          <h2>{name}</h2>
+          <p>{stars}</p>
+          <p>{reviews}</p>
+          <p className="product-data-price">
+          Taka: <del> <FormatingPrice price={price + 25000}></FormatingPrice> </del>
+
+          </p>
+          <p className="product-data-price product-data-real-price">
+            Deal of the day: <FormatingPrice price={price}></FormatingPrice>
+          </p>
+          <p>{description}</p>
+          <div className="product-data-warranty">
+              <div className="product-warranty-data">
+                <TbTruckDelivery className="warranty-icon" />
+                <p>Free Delivery</p>
+              </div>
+
+              <div className="product-warranty-data">
+                <TbReplace className="warranty-icon" />
+                <p>30 Days Replacement</p>
+              </div>
+
+              <div className="product-warranty-data">
+                <TbTruckDelivery className="warranty-icon" />
+                <p>Thapa Delivered </p>
+              </div>
+
+              <div className="product-warranty-data">
+                <MdSecurity className="warranty-icon" />
+                <p>2 Year Warranty </p>
+              </div>
+            </div>
+          
+        </div>
 
         </div>
 
